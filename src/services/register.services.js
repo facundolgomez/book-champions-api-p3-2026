@@ -3,7 +3,7 @@ import bcrypt from "bcrypt";
 import { validateRegisterUser } from "../helpers/validations.js";
 
 export const registerUser = async (req, res) => {
-  const result = validateLoginUser(req.body);
+  const result = validateRegisterUser(req.body);
 
   if (result.error) {
     return res.status(400).send({ message: result.message });
